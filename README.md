@@ -1,1 +1,1 @@
-# HealthTick
+# PillPal
