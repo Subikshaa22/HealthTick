@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:medicine_reminder/constants.dart';
 import 'package:medicine_reminder/global_bloc.dart';
-//import 'package:medicine_reminder/pages/new_entry/new_entry_bloc.dart';
+import 'package:medicine_reminder/pages/new_entry/new_entry_bloc.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
-//import 'pages/home_page.dart';
+import 'pages/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -123,7 +123,7 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
           ),
-          //home: const HomePage(),
+          home: const HomePage(),
         );
       }),
     );
