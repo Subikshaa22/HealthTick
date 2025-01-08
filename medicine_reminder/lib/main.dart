@@ -20,7 +20,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  // This widget is the root of your application.
+
   GlobalBloc? globalBloc;
 
   @override
@@ -107,7 +107,7 @@ class _MyAppState extends State<MyApp> {
                 borderSide: BorderSide(color: kPrimaryColor),
               ),
             ),
-            //lets customize the timePicker theme
+            // customize the timePicker theme
             timePickerTheme: TimePickerThemeData(
               backgroundColor: kScaffoldColor,
               hourMinuteColor: kTextColor,
