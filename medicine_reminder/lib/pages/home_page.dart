@@ -91,7 +91,7 @@ class TopContainer extends StatelessWidget {
         SizedBox(
           height: 2.h,
         ),
-        //lets show number of saved medicines from shared preferences
+        //show number of saved medicines from shared preferences
         StreamBuilder<List<Medicine>>(
             stream: globalBloc.medicineList$,
             builder: (context, snapshot) {
@@ -114,13 +114,6 @@ class BottomContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //later we will use condition to show the save data
-    // return Center(
-    //   child: Text(
-    //     'No Medicine',
-    //     textAlign: TextAlign.center,
-    //     style: Theme.of(context).textTheme.headline3,
-    //   ),
 
     final GlobalBloc globalBloc = Provider.of<GlobalBloc>(context);
 
@@ -158,13 +151,7 @@ class MedicineCard extends StatelessWidget {
   const MedicineCard({Key? key, required this.medicine}) : super(key: key);
   final Medicine medicine;
   //for getting the current details of the saved items
-
-  //first we need to get the medicine type icon
-  //lets make a function
-
   Hero makeIcon(double size) {
-    //here is the bug, the capital word of the first letter
-    //lets fix
     if (medicine.medicineType == 'Bottle') {
       return Hero(
         tag: medicine.medicineName! + medicine.medicineType!,
@@ -219,7 +206,6 @@ class MedicineCard extends StatelessWidget {
       highlightColor: Colors.white,
       splashColor: Colors.grey,
       onTap: () {
-        //go to details activity with animation, later
 
         Navigator.of(context).push(
           PageRouteBuilder<void>(
@@ -251,11 +237,8 @@ class MedicineCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             const Spacer(),
-            //call the function here icon type
-            //later we will the icon issue
             makeIcon(7.h),
             const Spacer(),
-            //hero tag animation, later
             Hero(
               tag: medicine.medicineName!,
               child: Text(
@@ -268,7 +251,6 @@ class MedicineCard extends StatelessWidget {
             SizedBox(
               height: 0.3.h,
             ),
-            //time interval data with condition, later
             Text(
               medicine.interval == 1
                   ? "Every ${medicine.interval} hour"
