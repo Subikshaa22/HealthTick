@@ -23,7 +23,6 @@ class GlobalBloc {
     blockList.removeWhere(
         (medicine) => medicine.medicineName == tobeRemoved.medicineName);
 
-    //remove notifications,todo
     for (int i = 0; i < (24 / tobeRemoved.interval!).floor(); i++) {
       flutterLocalNotificationsPlugin
           .cancel(int.parse(tobeRemoved.notificationIDs![i]));

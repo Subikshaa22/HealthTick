@@ -503,7 +503,7 @@ class MedicineTypeColumn extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         //select medicine type
-        //lets create a new block for selecting and adding new entry
+        //create a new block for selecting and adding new entry
         newEntryBloc.updateSelectedMedicine(medicineType);
       },
       child: Column(

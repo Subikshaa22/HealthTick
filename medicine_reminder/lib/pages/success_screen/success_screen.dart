@@ -12,7 +12,6 @@ class SuccessScreen extends StatefulWidget {
 class _SuccessScreenState extends State<SuccessScreen> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     Timer(const Duration(milliseconds: 2500), () {
       Navigator.popUntil(context, ModalRoute.withName('/'));

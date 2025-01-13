@@ -38,8 +38,6 @@ class _MedicineDetailsState extends State<MedicineDetails> {
                   shape: const StadiumBorder(),
                 ),
                 onPressed: () {
-                  //open alert dialog box,+global bloc, later
-                  //cool its working
                   openAlertBox(context, _globalBloc);
                 },
                 child: Text(
@@ -59,8 +57,8 @@ class _MedicineDetailsState extends State<MedicineDetails> {
       ),
     );
   }
-  //lets delete a medicine from memory
-
+  
+//delete a medicine from memory
   openAlertBox(BuildContext context, GlobalBloc _globalBloc) {
     return showDialog(
       context: context,
@@ -91,7 +89,7 @@ class _MedicineDetailsState extends State<MedicineDetails> {
             ),
             TextButton(
               onPressed: () {
-                //global block to delete medicine,later
+                //global block to delete medicine
                 _globalBloc.removeMedicine(widget.medicine);
                 Navigator.popUntil(context, ModalRoute.withName('/'));
               },
@@ -167,8 +165,6 @@ class MainSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
-        //lets try another one
-        //okz same here, the same problem, later i will solve that
         makeIcon(7.h),
         SizedBox(
           width: 2.w,
